@@ -36,7 +36,7 @@ class ItemController extends Controller
             'quantity' => $request->quantity,
             'category_id' => $request->category_id,
             'supplier_id' => $request->supplier_id,
-            'created_by' => Auth::id() ?? 1, // Asumsi admin login, fallback ke ID 1
+            'created_by' => Auth::id() ?? 1,
         ]);
 
         return redirect()->route('items.index')->with('success', 'Item added successfully');

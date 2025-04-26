@@ -48,9 +48,9 @@ class ReportController extends Controller
             ->selectRaw('SUM(items.price * items.quantity) as total_value')
             ->get();
 
-        // 6. Ringkasan keseluruhan sistem (sudah ada di dashboard, tapi ditampilkan ulang di sini)
+        // 6. Ringkasan keseluruhan sistem
         $totalItems = Item::count();
-        $totalStockValueOverall = $totalStockValue; // Sudah dihitung di atas
+        $totalStockValueOverall = $totalStockValue;
         $totalCategories = Category::count();
         $totalSuppliers = Supplier::count();
 
