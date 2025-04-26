@@ -59,5 +59,8 @@ Project uts yang dibuat adalah aplikasi web sederhana untuk mengelola persediaan
 - Ringkasan keseluruhan sistem
 - report.blade.php
 
-
-
+8. Menjalankan aplikasi
+- docker-compose up -d
+- Jalankan migrasi "docker-compose exec app php artisan migrate"
+- Jalankan seeder "docker-compose exec app php artisan db:seed --class=AdminSeeder"
+- Akses aplikasi laravel di http://localhost:8000
